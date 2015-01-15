@@ -3,7 +3,9 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>1.509.1</version><!-- which version of Jenkins is this plugin built against? -->
+    <version>1.580.2</version><!-- which version of Jenkins is this plugin built against? (Current LTS as at 14 Jan 2015)-->
+                              <!-- Additionally, version > 1.509.1 required to support running with JDK 8 and JUnit rule
+                                   usage in tests ref https://issues.jenkins-ci.org/browse/JENKINS-23239 -->
   </parent>
 
   <groupId>org.jenkins-ci.plugins</groupId>
@@ -66,14 +68,14 @@
       explicitly specifying the latest version here because one we get from the parent POM
       tends to lag behind a bit
     -->
-    <maven-hpi-plugin.version>1.95</maven-hpi-plugin.version>
+    <maven-hpi-plugin.version>1.106</maven-hpi-plugin.version>
   </properties>
 
   <dependencies>
       <dependency>
           <groupId>org.apache.mesos</groupId>
           <artifactId>mesos</artifactId>
-          <version>0.20.0</version>
+          <version>0.21.1</version>
       </dependency>
       <dependency>
           <groupId>com.google.protobuf</groupId>
